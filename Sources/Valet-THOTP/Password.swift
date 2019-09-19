@@ -17,6 +17,6 @@ public struct Password: PasswordProtocol {
 
 extension Password: Identifiable {
     public var id: String {
-        name + (issuer ?? generator.secret.base64EncodedString())
+        generator.secret.base64EncodedString()
     }
 }
